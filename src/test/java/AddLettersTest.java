@@ -23,11 +23,9 @@ public class AddLettersTest {
 
         String letter = AddLetters.transformNumberIntoAlphabetLetterAtPosition(1);
         String letter1 = AddLetters.transformNumberIntoAlphabetLetterAtPosition(26);
-        String letter2 = AddLetters.transformNumberIntoAlphabetLetterAtPosition(30);
 
         assertEquals("a", letter);
         assertEquals("z", letter1);
-        assertEquals("d", letter2);
     }
 
     @Test
@@ -36,9 +34,11 @@ public class AddLettersTest {
         String letter = AddLetters.addLetters("a", "b", "c");
         String letter1 = AddLetters.addLetters();
         String letter2 = AddLetters.addLetters("z");
+        String letter3 = AddLetters.addLetters("y", "y", "y");
 
         assertEquals("f", letter);
         assertEquals("z", letter2);
         assertEquals("z", letter1);
+        assertEquals("w", letter3);
     }
 }

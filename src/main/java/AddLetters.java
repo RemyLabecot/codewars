@@ -15,8 +15,10 @@ public class AddLetters {
             }
             nombreTotal += transformLetterToNumericPosition(letter);
         }
-        if(nombreTotal > 26) nombreTotal = nombreTotal%26;
-        if(nombreTotal<1) nombreTotal =26;
+
+        while(nombreTotal > 26) {
+            nombreTotal -= 26;
+        }
 
         return transformNumberIntoAlphabetLetterAtPosition(nombreTotal);
     }
